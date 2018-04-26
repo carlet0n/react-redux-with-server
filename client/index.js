@@ -3,19 +3,17 @@ import './index.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Provider} from 'react-redux'
+import { Provider } from 'react-redux'
+import { Router } from 'react-router-dom'
 import store from './store'
+import Routes from './Routes'
+import history from './history'
 
 ReactDOM.render(
   <Provider store={store}>
-    <div id='demo' className='fill-xy bg-yellow black column center-xy'>
-      <div>
-        <div>Express&</div>
-        <div>Sequelize&</div>
-        <div>React&</div>
-        <div>Redux.</div>
-      </div>
-    </div>
+    <Router history={history}>
+      <Routes />
+    </Router>
   </Provider>,
   document.getElementById('app')
 )
