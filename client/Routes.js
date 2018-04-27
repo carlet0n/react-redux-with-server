@@ -1,13 +1,13 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Welcome from './Welcome'
-import Game from './Game'
+import CrocGame from './components/CrocGame'
 
 const Routes = () => (
     <div className="fill-xy center-xy column">
       <Switch>
         <Route exact path='/' component={Welcome} />
-        <Route path='/game' component={Game}/>
+        <Route path='/CrocGame' component={CrocGame}/>
       </Switch>
     </div>
 )
